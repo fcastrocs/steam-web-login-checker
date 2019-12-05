@@ -1,0 +1,19 @@
+{
+  "name": "steam-web-login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "checker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bignumber.js": "^8.0.2",
+    "http-proxy-agent": "^2.1.0",
+    "node-rsa": "^1.0.3",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "socks-proxy-agent": "^4.0.2"
+  }
+}
