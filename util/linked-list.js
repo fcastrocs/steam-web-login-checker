@@ -1,6 +1,8 @@
+"use strict";
+
 //double linked list
 class LinkedList{
-    constructor(){
+    constructor(array){
         this.head = new Object();
         this.head.val = null;
         this.head.next = null;
@@ -10,12 +12,13 @@ class LinkedList{
 
         this.size = 0;
         this.iterations = 0; //this number increases when next() is called
+
+        this.arrayToList(array)
     }
 
     arrayToList(array){
-        if(typeof array === "undefined"){
-            console.log("Error: cannot convert undefined array to list.");
-            process.exit();
+        if(!array){
+            throw new Error("array is undefined");
         }
 
         //initialize head node
@@ -45,9 +48,8 @@ class LinkedList{
     }
 
     remove(item){
-        if(typeof item === "undefined"){
-            console.log("Error: cannot remove undefined item from list.");
-            return;
+        if(!item){
+            throw new Error("item is undefined");
         }
 
         if(this.size == 1){
